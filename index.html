@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-THKZQGG62F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-THKZQGG62F');
+</script>
+<title>From 天好 to Tim Hortons | Will Clegg</title>
+<style>
+:root {
+  --bg: #f5f2ee;
+  --bg-card: #ffffff;
+  --text: #1a1a1a;
+  --text-secondary: #5a5550;
+  --accent: #c4362c;
+  --border: #e0dbd5;
+  --tag-bg: #eae6e0;
+  --tag-text: #6b6560;
+  --hero-bg: #1c2028;
+  --hero-text: #f0ece6;
+  --hero-sub: #a8a29e;
+  --tims-red: #c4362c;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141618; --bg-card: #1e2024; --text: #e8e4de; --text-secondary: #9a958e;
+    --accent: #e05a50; --border: #2e3038; --tag-bg: #2a2c32; --tag-text: #9a958e;
+    --hero-bg: #0c0e12; --hero-text: #e8e4de; --hero-sub: #78736c;
+    --tims-red: #e05a50; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141618; --bg-card: #1e2024; --text: #e8e4de; --text-secondary: #9a958e;
+  --accent: #e05a50; --border: #2e3038; --tag-bg: #2a2c32; --tag-text: #9a958e;
+  --hero-bg: #0c0e12; --hero-text: #e8e4de; --hero-sub: #78736c;
+  --tims-red: #e05a50; color-scheme: dark;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased;
+}
+
+/* Hero */
+.hero {
+  background: var(--hero-bg); color: var(--hero-text);
+  padding: 80px 24px 72px; text-align: center;
+}
+.hero h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 400;
+  letter-spacing: -0.01em; line-height: 1.15; text-wrap: balance; margin-bottom: 8px;
+}
+.hero .client-name { font-size: 1.2rem; color: var(--hero-sub); margin-bottom: 20px; }
+.hero .subtitle { font-size: 1.02rem; color: var(--hero-sub); max-width: 600px; margin: 0 auto 28px; }
+.hero .contact {
+  font-size: 0.88rem; color: var(--hero-sub);
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 20px;
+}
+.hero .contact a { color: var(--hero-sub); text-decoration: none; }
+.hero .contact a:hover { color: var(--hero-text); }
+
+/* Theme toggle */
+.theme-toggle {
+  position: fixed; top: 16px; right: 16px; z-index: 100;
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: 50%;
+  width: 36px; height: 36px; cursor: pointer; font-size: 16px;
+  display: grid; place-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.theme-toggle:hover { transform: scale(1.1); }
+
+/* Intro */
+.intro { max-width: 720px; margin: 0 auto; padding: 56px 24px 24px; }
+.intro p { font-size: 1.02rem; color: var(--text-secondary); }
+.intro p + p { margin-top: 12px; }
+
+/* Tags row */
+.tags-row { max-width: 720px; margin: 0 auto; padding: 0 24px 40px; display: flex; flex-wrap: wrap; gap: 8px; }
+.tag {
+  display: inline-block; background: var(--tag-bg); color: var(--tag-text);
+  font-size: 0.78rem; font-weight: 500; padding: 3px 10px; border-radius: 20px; white-space: nowrap;
+}
+
+/* Photo strip */
+.photo-strip {
+  max-width: 1100px; margin: 0 auto; padding: 0 24px 48px;
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px;
+}
+.photo-strip img {
+  width: 100%; border-radius: 8px; display: block; object-fit: cover;
+  border: 1px solid var(--border); aspect-ratio: 4/3;
+}
+
+/* Section headings */
+.section-heading {
+  max-width: 720px; margin: 0 auto; padding: 48px 24px 16px;
+}
+.section-heading h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.6rem; font-weight: 400; color: var(--text);
+}
+.section-heading .section-sub {
+  font-size: 0.92rem; color: var(--text-secondary); margin-top: 4px;
+}
+.section-heading .section-rule {
+  width: 48px; height: 2px; background: var(--accent); margin-top: 12px; border-radius: 1px;
+}
+
+/* Content area */
+.content { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+.content p { font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 16px; }
+.content h3 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.15rem; font-weight: 400; color: var(--text);
+  margin: 28px 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border);
+}
+
+/* Example cards */
+.example {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 12px; padding: 24px; margin: 20px 0;
+}
+.example .ex-label {
+  font-weight: 600; font-size: 0.75rem; color: var(--accent);
+  text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px;
+}
+.example .cn {
+  font-size: 0.92rem; color: var(--text-secondary);
+  padding: 10px 14px; background: var(--tag-bg); border-radius: 6px;
+  border-left: 3px solid var(--border); margin-bottom: 8px;
+}
+.example .en {
+  font-size: 0.95rem; color: var(--text);
+  padding: 10px 14px; background: var(--tag-bg); border-radius: 6px;
+  border-left: 3px solid var(--accent);
+}
+.example .note {
+  font-size: 0.88rem; color: var(--text-secondary);
+  margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border);
+}
+.example .note strong {
+  color: var(--text); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em;
+}
+
+/* Scope list */
+.scope-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+  margin: 16px 0 32px;
+}
+.scope-item {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 8px; padding: 16px 18px;
+}
+.scope-item .scope-title {
+  font-weight: 600; font-size: 0.85rem; color: var(--text); margin-bottom: 4px;
+}
+.scope-item .scope-desc {
+  font-size: 0.85rem; color: var(--text-secondary);
+}
+
+/* Stats row */
+.stats-row {
+  display: flex; gap: 24px; justify-content: center; flex-wrap: wrap;
+  margin: 24px 0 32px;
+}
+.stat {
+  text-align: center; min-width: 120px;
+}
+.stat .num {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 2rem; font-weight: 400; color: var(--accent); line-height: 1.2;
+}
+.stat .label {
+  font-size: 0.78rem; color: var(--text-secondary); text-transform: uppercase;
+  letter-spacing: 0.04em; margin-top: 2px;
+}
+
+/* Footer */
+.footer { text-align: center; padding: 48px 24px; font-size: 0.85rem; color: var(--text-secondary); border-top: 1px solid var(--border); margin-top: 48px; }
+.footer a { color: var(--accent); text-decoration: none; }
+
+@media (max-width: 700px) {
+  .photo-strip { grid-template-columns: 1fr; }
+  .scope-grid { grid-template-columns: 1fr; }
+  .hero { padding: 56px 20px 48px; }
+  .intro { padding: 40px 20px 24px; }
+  .content { padding: 0 16px; }
+  .section-heading { padding: 40px 16px 12px; }
+  .tags-row { padding: 0 16px 32px; }
+}
+</style>
+</head>
+<body>
+
+<button class="theme-toggle" onclick="
+  const t = document.documentElement;
+  const next = t.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  t.setAttribute('data-theme', next);
+" aria-label="Toggle theme">&#9685;</button>
+
+<!-- Hero -->
+<header class="hero">
+  <h1>From 天好 to Tim Hortons</h1>
+  <div class="client-name">A Tims China Localisation Case Study</div>
+  <p class="subtitle">Full-scope CN to EN localisation for a NASDAQ-listed coffee brand: website, press releases, corporate comms, and CSR content.</p>
+  <div class="contact">
+    <span>Will Clegg</span>
+    <span>Chinese &rarr; English</span>
+    <a href="https://www.linkedin.com/in/william-clegg-629455a0/">LinkedIn</a>
+  </div>
+</header>
+
+<!-- Intro -->
+<section class="intro">
+  <p>Tims China (NASDAQ: THCH) holds the exclusive franchise for Tim Hortons across mainland China, Hong Kong, and Macau. With over 1,000 stores in 93 cities and 37 million registered members, it is Tim Hortons' largest overseas market. I provided Chinese-to-English translation and localisation across the brand's public-facing communications, delivering investor-grade English copy that maintained the warm, approachable voice Tim Hortons is known for.</p>
+</section>
+
+<div class="tags-row">
+  <span class="tag">Website Localisation</span>
+  <span class="tag">Press Releases</span>
+  <span class="tag">Corporate Comms</span>
+  <span class="tag">CSR / Sustainability</span>
+  <span class="tag">Partnership Announcements</span>
+  <span class="tag">Investor-facing Copy</span>
+  <span class="tag">CN &rarr; EN</span>
+</div>
+
+<!-- Stats -->
+<div class="stats-row">
+  <div class="stat"><div class="num">1,028</div><div class="label">Stores in China</div></div>
+  <div class="stat"><div class="num">93</div><div class="label">Cities</div></div>
+  <div class="stat"><div class="num">37M+</div><div class="label">Members</div></div>
+  <div class="stat"><div class="num">NASDAQ</div><div class="label">Listed (THCH)</div></div>
+</div>
+
+<!-- Photo strip -->
+<div class="photo-strip">
+  <img src="img/tims-counter.png" alt="Tims China coffee handover">
+  <img src="img/tims-about.png" alt="Tims China store interior">
+  <img src="img/tims-ciie.png" alt="Tims at the China International Import Expo">
+</div>
+
+<!-- Scope of Work -->
+<div class="section-heading">
+  <h2>Scope of Work</h2>
+  <div class="section-rule"></div>
+</div>
+
+<div class="content">
+  <div class="scope-grid">
+    <div class="scope-item">
+      <div class="scope-title">Full Website</div>
+      <div class="scope-desc">Localised the complete timschina.com site: homepage, About Us, brand story, coffee sourcing narrative, CSR pages, and corporate boilerplate.</div>
+    </div>
+    <div class="scope-item">
+      <div class="scope-title">Press Releases</div>
+      <div class="scope-desc">Translated corporate press releases for investor and media audiences, including partnership announcements and milestone updates.</div>
+    </div>
+    <div class="scope-item">
+      <div class="scope-title">Partnership Comms</div>
+      <div class="scope-desc">China Southern Airlines joint membership launch: bilingual announcement covering member benefits, in-flight coffee rollout, and executive quotes.</div>
+    </div>
+    <div class="scope-item">
+      <div class="scope-title">Event Coverage</div>
+      <div class="scope-desc">CIIE (China International Import Expo) press materials: Tims' flagship appearance at the Canadian National Pavilion.</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Website Localisation -->
+<div class="section-heading">
+  <h2>Website Localisation</h2>
+  <p class="section-sub">Translating brand voice, not just brand words.</p>
+  <div class="section-rule"></div>
+</div>
+
+<div class="content">
+  <p>The Tims China website required a localisation approach that went beyond literal translation. The Chinese site uses a warm, community-oriented voice heavy on four-character idioms and rhythmic phrasing. My job was to produce English copy that read as if it had been written natively, while preserving the emotional register of the original.</p>
+
+  <h3>Brand Story &amp; Heritage</h3>
+
+  <div class="example">
+    <div class="ex-label">Brand founding narrative</div>
+    <div class="cn">1964年，Tim Hortons咖啡馆诞生于多伦多旁的宁静城市汉密尔顿，由传奇冰球运动员Tim Horton先生创立。他有一个梦想——希望有一个可以让大家享用咖啡和甜甜圈，并让顾客感觉到像家一样的地方。</div>
+    <div class="en">In 1964, Tim Horton, a celebrated Canadian hockey star, founded the first Tim Hortons coffee restaurant in Hamilton, a serene city near Toronto. Tim's vision was to establish a place where anyone could go at any time and feel at home.</div>
+    <div class="note">
+      <strong>Approach</strong><br>
+      The CN uses 传奇冰球运动员 ("legendary ice hockey athlete"), a factual descriptor. "Celebrated Canadian hockey star" is a more natural English register for a brand origin story. The dream metaphor (他有一个梦想) was restructured as "Tim's vision," which sounds more natural in English brand copy while retaining the aspirational tone.
+    </div>
+  </div>
+
+  <h3>Coffee Sourcing Narrative</h3>
+
+  <div class="example">
+    <div class="ex-label">Coffee process copy</div>
+    <div class="cn">烘焙，是咖啡风味蜕变的艺术。经过烘焙的艺术，把咖啡从绿色的生豆，转变为你所熟悉的、风味醇厚的咖啡豆。Tims天好咖啡以"一批一烘"的精准烘焙方式，让咖啡中自带的香气与风味得以完整表达。</div>
+    <div class="en">Roasting is where the magic happens. It is the step that turns green coffee beans into the rich, aromatic beans you know and love. At Tim Hortons, we use "one batch at a time" roasting techniques to protect the precision of flavor and keep the natural aromas intact.</div>
+    <div class="note">
+      <strong>Approach</strong><br>
+      The CN opens with a poetic declaration (咖啡风味蜕变的艺术, "the art of coffee flavor metamorphosis"). In English, this kind of elevated register risks sounding overwrought for a coffee brand. "Where the magic happens" strikes the right balance: warm, accessible, slightly playful. "One batch at a time" was kept in quotes as it functions as a branded process name.
+    </div>
+  </div>
+
+  <h3>CSR &amp; Sustainability</h3>
+
+  <div class="example">
+    <div class="ex-label">Qixi Festival charity campaign</div>
+    <div class="cn">2023年七夕期间，在Tims天好咖啡购买指定饮品，就可以为流浪动物救助机构捐出1.1元的"爱心单身狗粮基金"。Tims天好咖啡让"撒狗粮"的说法，照进了关爱流浪动物的现实。</div>
+    <div class="en">During Qixi Festival 2023, also known as Chinese Valentine's Day, Tims China donated 1.1 yuan for each selected beverage purchase to a fund for stray animal rescue. Tims China transformed the concept of looking after China's "single dogs" into a practical way of looking after creatures in need, forming a unique charitable experience for Qixi Festival.</div>
+    <div class="note">
+      <strong>Approach</strong><br>
+      This is a culturally dense piece. 撒狗粮 ("scatter dog food") is Chinese internet slang for couples showing off affection; 单身狗 ("single dog") is the self-deprecating counterpart. A direct translation would be meaningless. The solution: keep the cultural reference, explain just enough for comprehension, and let the wordplay land through the "looking after... single dogs / looking after creatures in need" parallel.
+    </div>
+  </div>
+</div>
+
+
+<!-- Press Releases -->
+<div class="section-heading">
+  <h2>Press Releases</h2>
+  <p class="section-sub">Investor-grade English for partnership and milestone announcements.</p>
+  <div class="section-rule"></div>
+</div>
+
+<div class="content">
+
+  <h3>China Southern Airlines Partnership</h3>
+  <p>A joint membership campaign linking Tims' 35-million-member coffee loyalty program with China Southern's 140-million-user Sky Pearl Club. The release needed to clearly communicate a complex, layered benefits structure while maintaining the warmth of both brands.</p>
+
+  <div class="example">
+    <div class="ex-label">Headline &amp; subhead</div>
+    <div class="cn">Tims天好中国携手南方航空，开启联合会员活动计划<br>打造"咖啡+航旅"融合体验，升级会员价值体系</div>
+    <div class="en">Tims China Partners with China Southern Airlines to Launch Joint Membership Campaign<br>Blending Coffee and Air Travel to Upgrade the Member Value System</div>
+    <div class="note">
+      <strong>Approach</strong><br>
+      The CN headline uses 携手 ("join hands"), a stock phrase in Chinese corporate comms. "Partners with... to launch" is the standard English press release construction. The subhead's 打造 ("forge/create") was simplified to "Blending," which mirrors the cross-industry concept more naturally.
+    </div>
+  </div>
+
+  <div class="example">
+    <div class="ex-label">Executive quote</div>
+    <div class="cn">"从线下门店的咖啡暖食，延伸至万米高空的机上咖啡，我们始终致力于通过一次次创新，为顾客提供温暖体验和优质产品。"</div>
+    <div class="en">"From coffee and warm food in our stores to coffee at cruising altitude, we are committed to delivering quality products and a warm experience to our customers through continuous innovation."</div>
+    <div class="note">
+      <strong>Approach</strong><br>
+      万米高空 (literally "ten-thousand-meter high altitude") is a standard Chinese expression for cruising altitude. "At cruising altitude" is the idiomatic English equivalent for aviation comms. The sentence was restructured: the CN places the journey metaphor first and the commitment second; the English version keeps this order but tightens the phrasing to avoid the run-on feel common in translated executive quotes.
+    </div>
+  </div>
+
+  <h3>CIIE Canadian National Pavilion</h3>
+  <p>A press release for Tims' flagship appearance at the 9th China International Import Expo, where Canada was Guest Country of Honor. The piece positioned Tims as both a consumer brand and a symbol of China-Canada trade relations.</p>
+
+  <div class="example">
+    <div class="ex-label">Brand positioning</div>
+    <div class="cn">作为加拿大当之无愧的"国民咖啡品牌"，Tims天好咖啡受邀重磅亮相加拿大国家馆。在这座汇聚了加拿大精华的展馆内，Tims不仅以一抹标志性的温暖红色成为全场焦点，更以一杯杯现磨咖啡为媒介，为中外嘉宾带来了"宾至如归"的家乡亲切感。</div>
+    <div class="en">Tims Coffee, Canada's indisputable "national coffee brand," was invited to make a flagship appearance at the Canadian National Pavilion. Inside the pavilion, which brought together the best of Canada, Tims stood out with its signature warm red branding. Cup by cup, its freshly ground coffee gave Chinese and international guests alike a welcoming taste of home.</div>
+    <div class="note">
+      <strong>Approach</strong><br>
+      The CN stacks multiple parallel phrases (受邀重磅亮相, 以一抹标志性的温暖红色成为全场焦点, 以一杯杯现磨咖啡为媒介). Translating each one fully would produce a bloated English sentence. The solution: condense into three clean beats: appearance, visual impact, experience. "Cup by cup" preserves the 一杯杯 repetition that the CN uses for rhythmic warmth. 宾至如归 ("guests feel at home") was rendered as "a welcoming taste of home," merging the idiom with the coffee metaphor.
+    </div>
+  </div>
+
+  <div class="example">
+    <div class="ex-label">Market significance</div>
+    <div class="cn">它不仅向中国消费者展示了加拿大品牌的优质传承，更是中加两国在消费与餐饮领域深度交流的生动窗口。它证明了，Tims不仅是一杯被中国顾客认可的专业咖啡，更是连接中加文化与情感的温暖纽带。</div>
+    <div class="en">It showcased the quality and heritage of Canadian brands to Chinese consumers, and offered a vivid window into the deepening exchange between China and Canada in the consumer and food and beverage sectors. It also proved that Tims is not only a professional coffee brand recognized by Chinese customers, but also a warm bond connecting the cultures and sensibilities of the two countries.</div>
+    <div class="note">
+      <strong>Approach</strong><br>
+      The CN uses the 不仅...更是 ("not only... but also") construction twice in succession. Repeating this pattern in English would sound mechanical. The first instance was absorbed into a compound sentence; the second was kept as the culminating statement for rhetorical weight. 情感 ("emotions/sensibilities") was rendered as "sensibilities" rather than "feelings" to maintain a formal press register.
+    </div>
+  </div>
+</div>
+
+
+<!-- Localisation Challenges -->
+<div class="section-heading">
+  <h2>Localisation Challenges</h2>
+  <p class="section-sub">Recurring patterns and how I handled them.</p>
+  <div class="section-rule"></div>
+</div>
+
+<div class="content">
+
+  <div class="example">
+    <div class="ex-label">Four-character idioms in corporate copy</div>
+    <div class="cn">强强联手 · 深耕用户 · 互融共生 · 温暖纽带</div>
+    <div class="en">"Strong partnership" · "Deep customer engagement" · "Mutual integration" · "Warm bond"</div>
+    <div class="note">
+      <strong>Challenge</strong><br>
+      Chinese corporate writing relies heavily on four-character compounds (成语 and 四字短语) that pack meaning into tight, rhythmic phrases. English has no equivalent device. Translating each one literally ("strong-strong join hands," "deep-plough users") produces awkward copy. The approach: treat each as an intent signal, then write the English equivalent that a native PR writer would use in the same context.
+    </div>
+  </div>
+
+  <div class="example">
+    <div class="ex-label">Register control across content types</div>
+    <div class="note">
+      <strong>Challenge</strong><br>
+      The same client required three distinct registers across the scope of work: warm and accessible for the consumer-facing website; formal and precise for investor-grade press releases; and culturally sensitive for CSR content where Chinese customs (Qixi, Mid-Autumn Festival) needed explaining without over-glossing. Maintaining a consistent brand voice while shifting register across these contexts was a key requirement.
+    </div>
+  </div>
+
+  <div class="example">
+    <div class="ex-label">Parallel sentence compression</div>
+    <div class="cn">南航会员可享用一杯醇香咖啡，搭配一份营养热乎的贝果堡，为旅程注入能量，多一分从容与满足。</div>
+    <div class="en">China Southern members can enjoy a rich, aromatic coffee paired with a warm Bagel Burger for a more relaxed, satisfying journey.</div>
+    <div class="note">
+      <strong>Challenge</strong><br>
+      The CN chains four clauses with escalating emotional language (注入能量 "inject energy," 从容与满足 "composure and satisfaction"). Translating all four produces English that reads as overwrought for what is, at its core, a coffee-and-sandwich combo. The solution: compress into one sentence that keeps the indulgent feeling without the clause-stacking.
+    </div>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="footer">
+  <p>William Clegg | Chinese &rarr; English Translator &amp; Localisation Specialist</p>
+  <p><a href="https://www.linkedin.com/in/william-clegg-629455a0/">LinkedIn</a></p>
+</footer>
+
+</body>
+</html>
